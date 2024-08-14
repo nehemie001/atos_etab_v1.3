@@ -4,27 +4,29 @@ import java.util.Date;
 
 public class Personne {
     private int id;
-    private Date dateNaissance;
+    private String dateNaissance;
     private String ville;
     private String nom;
     private String prenom;
+    private String telephone;
 
-    public Personne() {
+    public Personne(int id, String dateNaissance, String ville, String nom, String prenom) {
     }
 
-    public Personne(int id, Date dateNaissance, String ville, String nom, String prenom) {
+    public Personne(int id, String dateNaissance, String ville, String nom, String prenom, String telephone) {
         this.id = id;
         this.dateNaissance = dateNaissance;
         this.ville = ville;
         this.nom = nom;
         this.prenom = prenom;
+        this.telephone = telephone;
     }
 
     public int getId() {
         return id;
     }
 
-    public Date getDateNaissance() {
+    public String getDateNaissance() {
         return dateNaissance;
     }
 
@@ -44,7 +46,7 @@ public class Personne {
         this.id = id;
     }
 
-    public void setDateNaissance(Date dateNaissance) {
+    public void setDateNaissance(String dateNaissance) {
         this.dateNaissance = dateNaissance;
     }
 
@@ -58,6 +60,14 @@ public class Personne {
 
     public void setPrenom(String prenom) {
         this.prenom = prenom;
+    }
+
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
     }
 
     public void supprimer(int id){

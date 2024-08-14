@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c234e16-33f5-4155-9750-adbe892209c5" name="Changes" comment="Push my new projet in Github">
+    <list default="true" id="1c234e16-33f5-4155-9750-adbe892209c5" name="Changes" comment="update the comments">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/Impl/EleveDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/Impl/EleveDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/Impl/UtilisateurDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/Impl/UtilisateurDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/SingletonDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/SingletonDataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Eleve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Eleve.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Personne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Personne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Professeur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Professeur.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +20,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory"><![CDATA[{
@@ -91,7 +103,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723564713037</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update the comments">
+      <option name="closed" value="true" />
+      <created>1723565723835</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1723565723835</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -108,7 +128,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
     <MESSAGE value="Push my new projet in Github" />
-    <option name="LAST_COMMIT_MESSAGE" value="Push my new projet in Github" />
+    <MESSAGE value="update the comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="update the comments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

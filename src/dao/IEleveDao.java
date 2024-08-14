@@ -2,6 +2,7 @@ package dao;
 
 import models.Eleve;
 
+import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -23,7 +24,7 @@ public interface IEleveDao {
      * @param eleve Élève à modifier.
      * @return Élève modifié.
      */
-    Eleve modifier(Eleve eleve);
+    Eleve modifier(Eleve eleve) throws SQLException;
 
     /**
      * Supprime un élève par son identifiant.

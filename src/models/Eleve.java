@@ -14,8 +14,8 @@ public class Eleve extends Personne {
     /**
      * Constructeur par défaut de la classe models.Eleve.
      */
-    public Eleve() {
-    }
+//    public Eleve() {
+//    }
 
     /**
      * Constructeur avec paramètres.
@@ -28,7 +28,7 @@ public class Eleve extends Personne {
      * @param classe        Classe de l'élève.
      * @param matricule     Matricule de l'élève.
      */
-    public Eleve(int id, Date dateNaissance, String ville, String nom, String prenom, String classe, String matricule) {
+    public Eleve(int id, String dateNaissance, String ville, String nom, String prenom, String classe, String matricule) {
         super(id, dateNaissance, ville, nom, prenom);
         this.classe = classe;
         this.matricule = matricule;

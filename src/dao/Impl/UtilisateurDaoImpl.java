@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class UtilisateurDaoImpl implements IUtilisateurDao {
-    private static String QUERY_GET_USER_BY_PSEUDO_AND_PASSWORD = "SELECT * FROM Utilisateur WHERE pseudo = ? AND motDePasse = ?";
+    private static String QUERY_GET_USER_BY_PSEUDO_AND_PASSWORD = "SELECT * FROM utilisateur WHERE pseudo = ? AND motDePasse = ?";
 
     @Override
     public Utilisateur getUser(String identifiant, String motDePasse) throws SQLException {

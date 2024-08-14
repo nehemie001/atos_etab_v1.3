@@ -17,8 +17,7 @@ public class Professeur extends Personne {
     /**
      * Constructeur par défaut de la classe models.Professeur.
      */
-    public Professeur() {
-    }
+
 
     /**
      * Constructeur avec paramètres.
@@ -34,8 +33,8 @@ public class Professeur extends Personne {
      * @param sujetProchaineReunion   Sujet de la prochaine réunion.
      */
 
-    public Professeur(int id, Date dateNaissance, String ville, String nom, String prenom, String vacant, String matiereEnseigne
-    , String prochainCours, String sujetProchaineReunion) {
+    public Professeur(int id, String dateNaissance, String ville, String nom, String prenom, String vacant, String matiereEnseigne
+            , String prochainCours, String sujetProchaineReunion) {
         super(id, dateNaissance, ville, nom, prenom);
         this.vacant = Boolean.valueOf(vacant);
         this.matiereEnseigne = matiereEnseigne;
@@ -104,4 +103,4 @@ public class Professeur extends Personne {
      * @return Message indiquant la matière enseignée.
      */
 
-    }
+}

@@ -22,7 +22,7 @@ public class Main {
         System.out.println("                                                   CONNEXION");
 
         Utilisateur utilisateur = new Utilisateur();
-        utilisateur.ajouterUtilisateurDefaut(); // Ajouter l'utilisateur par défaut au démarrage
+//        utilisateur.ajouterUtilisateurDefaut();
 
         // Initialisation des variables
         Scanner scanner = new Scanner(System.in);
@@ -113,16 +113,16 @@ public class Main {
 
                                         System.out.print("Entrez la date de naissance de l'élève (dd/MM/yyyy) : ");
                                         String dateNaissanceStr = scanner.nextLine();
-                                        Date dateNaissance = null;
+                                        String dateNaissance = null;
                                         try {
-                                            dateNaissance = new SimpleDateFormat("dd/MM/yyyy").parse(dateNaissanceStr);
+                                            dateNaissance = String.valueOf(new SimpleDateFormat("dd/MM/yyyy").parse(dateNaissanceStr));
                                         } catch (ParseException e) {
                                             System.out.println("Format de date invalide. Élève non ajouté.");
                                             break;
                                         }
 
                                         Eleve eleve = new Eleve(id, dateNaissance, ville, nom, prenom, classe, matricule);
-                                        //eleve.ajouter(eleve);
+
                                         listeEleves.add(eleve);
 
                                         System.out.println("Élève ajouté avec succès !");
@@ -265,9 +265,9 @@ public class Main {
 
                                         System.out.print("Entrez la date de naissance du professeur (dd/MM/yyyy) : ");
                                         String dateNaissanceStr = scanner.nextLine();
-                                        Date dateNaissance = null;
+                                        String dateNaissance = null;
                                         try {
-                                            dateNaissance = new SimpleDateFormat("dd/MM/yyyy").parse(dateNaissanceStr);
+                                            dateNaissance = String.valueOf(new SimpleDateFormat("dd/MM/yyyy").parse(dateNaissanceStr));
                                         } catch (ParseException e) {
                                             System.out.println("Format de date invalide. Élève non ajouté.");
                                             break;
