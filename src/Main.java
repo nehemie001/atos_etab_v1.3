@@ -22,7 +22,7 @@ public class Main {
         System.out.println("                                                   CONNEXION");
 
         Utilisateur utilisateur = new Utilisateur();
-//        utilisateur.ajouterUtilisateurDefaut();
+        utilisateur.ajouterUtilisateurDefaut();
 
         // Initialisation des variables
         Scanner scanner = new Scanner(System.in);
@@ -185,14 +185,14 @@ public class Main {
                                         }
                                         break;
                                     case 4:
-                                        // Lister les élèves
+                                        // List the students
                                         System.out.println("Liste des élèves :");
                                         for (Eleve e : listeEleves) {
                                             System.out.println(e);
                                         }
                                         break;
                                     case 5:
-                                        // Obtenir le dernier élève ajouté
+                                        // Get the last student added
                                         if (!listeEleves.isEmpty()) {
                                             System.out.println("Dernier élève ajouté : " + listeEleves.get(listeEleves.size() - 1));
                                         } else {

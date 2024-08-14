@@ -23,9 +23,8 @@ public class Utilisateur {
     }
 
     public void ajouterUtilisateurDefaut() {
-
         try {
-            String query = "INSERT INTO models.Utilisateur (pseudo, motDePasse, dateCreation, id_personne) VALUES (?, ?, CURDATE(), 1)";
+            String query = "INSERT INTO utilisateur (pseudo, motDePasse, dateCreation) VALUES (?, ?, CURDATE())";
             PreparedStatement statement = SingletonDataBase.getInstance().prepareStatement(query);
             statement.setString(1, "admin");
             statement.setString(2, "admin");
