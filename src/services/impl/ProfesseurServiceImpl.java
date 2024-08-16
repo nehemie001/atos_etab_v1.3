@@ -1,15 +1,24 @@
 package services.impl;
 
+import dao.IProfesseurDao;
 import models.Professeur;
 import services.IProfesseurService;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public class ProfesseurServiceImpl implements IProfesseurService {
 
+    private IProfesseurDao professeurDao;
+
+    public ProfesseurServiceImpl(IProfesseurDao professeurDao) {
+        this.professeurDao = professeurDao;
+    }
+
     @Override
-    public Professeur save(Professeur professeur) {
-        return null;
+    public Professeur save(Professeur professeur) throws SQLException {
+        professeurDao.save(professeur);
+        return professeur;
     }
 
     @Override
