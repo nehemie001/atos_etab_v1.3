@@ -58,4 +58,14 @@ public class Professeur extends Personne {
     public void mettreAjour(Professeur professeur){
 
     }
+
+    @Override
+    public String toString() {
+        return "Professeur{" +
+                "vacant=" + vacant +
+                ", matiereEnseigne='" + matiereEnseigne + '\'' +
+                ", prochainCours='" + prochainCours + '\'' +
+                ", sujetProchaineReunion='" + sujetProchaineReunion + '\'' +
+                '}';
+    }
 }

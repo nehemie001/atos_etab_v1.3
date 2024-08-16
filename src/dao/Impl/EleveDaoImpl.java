@@ -43,8 +43,7 @@ public class EleveDaoImpl implements IEleveDao {
                 personneId = rs.getInt(1);
             }
 
-//             Étape 2 : Insérer les informations de l'eleve dans la table Eleve
-
+//             Étape 2 : Insérer les informations de l'eleve dans la table Elevejh
             String query1 = "INSERT INTO Eleve () VALUES (?, ?, ?, ?)";
             PstmtE = SingletonDataBase.getInstance().prepareStatement(query1, PreparedStatement.RETURN_GENERATED_KEYS);
             PstmtE.setString(1, null);

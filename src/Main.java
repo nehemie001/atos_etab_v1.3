@@ -122,7 +122,6 @@ public class Main {
 //                                            System.out.println("Format de date invalide. Élève non ajouté.");
 //                                            break;
 //                                        }
-
                                         System.out.print("Entrez le telephone de l'élève : ");
                                         eleve.setTelephone(scanner.nextLine());
 
