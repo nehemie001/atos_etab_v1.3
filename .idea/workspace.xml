@@ -4,15 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c234e16-33f5-4155-9750-adbe892209c5" name="Changes" comment="update the comments">
+    <list default="true" id="1c234e16-33f5-4155-9750-adbe892209c5" name="Changes" comment="modification dans plusieurs fichiers">
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atos_EtabV1.3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Atos_EtabV1.3.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/IEleveDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/IEleveDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/Impl/EleveDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/Impl/EleveDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/Impl/UtilisateurDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/Impl/UtilisateurDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/SingletonDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/SingletonDataBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Eleve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Eleve.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Personne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Personne.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Professeur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Professeur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/IEleveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/IEleveService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/impl/EleveServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/impl/EleveServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,8 +62,8 @@
     "last_opened_file_path": "C:/ATOS/mysql-connector-j-8.3.0.jar",
     "onboarding.tips.debug.path": "C:/ATOS/Atos_EtabV1.3/src/Main.java",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -111,7 +115,23 @@
       <option name="project" value="LOCAL" />
       <updated>1723565723835</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="modification dans plusieurs fichiers">
+      <option name="closed" value="true" />
+      <created>1723622840120</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1723622840136</updated>
+    </task>
+    <task id="LOCAL-00007" summary="modification dans plusieurs fichiers">
+      <option name="closed" value="true" />
+      <created>1723631706747</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1723631706747</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -129,14 +149,15 @@
     <MESSAGE value="test" />
     <MESSAGE value="Push my new projet in Github" />
     <MESSAGE value="update the comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="update the comments" />
+    <MESSAGE value="modification dans plusieurs fichiers" />
+    <option name="LAST_COMMIT_MESSAGE" value="modification dans plusieurs fichiers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>386</line>
+          <line>241</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

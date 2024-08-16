@@ -4,103 +4,104 @@ import dao.IEleveDao;
 import dao.SingletonDataBase;
 import models.Eleve;
 
-import java.util.Date;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
 import java.util.List;
 
 public class EleveDaoImpl implements IEleveDao {
 
+    /**
+     * Ajoute un élève.
+     *
+     * @param eleve Élève à ajouter.
+     * @return Élève ajouté.
+     */
     @Override
-    public Eleve Ajouter(Eleve eleve) {
-        String query = "INSERT INTO Personne () values(? , ? , ? , ? , ? , ?)";
-        try{
-            PreparedStatement Pstmt = SingletonDataBase.getInstance().prepareStatement(query , PreparedStatement.RETURN_GENERATED_KEYS);
-
-            Pstmt.setString(1 , null);
-            Pstmt.setString(2 , eleve.getNom());
-            Pstmt.setString(3 , eleve.getPrenom());
-            Pstmt.setString(4 , eleve.getVille());
-            Pstmt.setString(5 , eleve.getTelephone());
-            Pstmt.setString(6 , eleve.getDateNaissance());
-
-            Pstmt.executeUpdate();
-
-            // Récupération du dernier ID inséré
-            ResultSet rs = Pstmt.getGeneratedKeys();
-            int lastInsertedId = 0;
-            if (rs.next()) {
-                lastInsertedId = rs.getInt(1);
-            }
-            eleve.setId(lastInsertedId);
-
-
-            String query1 = "INSERT INTO Eleve values(? , ? , ? , ? )";
-            PreparedStatement Pstmt1 = SingletonDataBase.getInstance().prepareStatement(query1);
-
-            Pstmt1.setString(1 , null);
-            Pstmt1.setString(2 , eleve.getMatricule());
-            Pstmt1.setString(3 , eleve.getClasse());
-            Pstmt1.setInt(4 , lastInsertedId);
-
-            Pstmt1.executeUpdate();
-
-        }catch (SQLException e){
-            e.printStackTrace();
-        }
-        return eleve;
-    }
-
-    @Override
-    public Eleve modifier(Eleve eleve) throws SQLException {
+    public void save(Eleve eleve) throws SQLException {
+        ResultSet rs = null;
         PreparedStatement Pstmt = null;
-        PreparedStatement pstmtEleve = null;
+        PreparedStatement PstmtE = null;
+        String query = "INSERT INTO Personne () VALUES (?, ?, ?, ?, ?)";
         try {
+            Pstmt = SingletonDataBase.getInstance().prepareStatement(query, PreparedStatement.RETURN_GENERATED_KEYS);
 
-            // Étape 1 :Update the table Person
-            String sqlPersonne = "UPDATE Personne SET nom = ?, prenom = ?, dateNaissance = ?, telephone = ?, ville = ? WHERE id = ?";
-            Pstmt = SingletonDataBase.getInstance().prepareStatement(sqlPersonne, PreparedStatement.RETURN_GENERATED_KEYS);
+//             Étape 1 : Insérer dans la table Personne
+
             Pstmt.setString(1, null);
-            Pstmt.setString(1, eleve.getNom());
-            Pstmt.setString(2, eleve.getPrenom());
-            Pstmt.setString(3, eleve.getDateNaissance());
-            Pstmt.setInt(4, eleve.getId());
+            Pstmt.setString(2, eleve.getNom());
+            Pstmt.setString(3, eleve.getPrenom());
+            Pstmt.setString(4, eleve.getVille());
+            Pstmt.setString(5, eleve.getTelephone());
 
             Pstmt.executeUpdate();
 
-            // Étape 2 : Modifier la table Eleve
-            String sqlEleve = "UPDATE Eleve SET classe = ?, numero_inscription = ? WHERE personne_id = ?";
-            pstmtEleve = SingletonDataBase.getInstance().prepareStatement(sqlEleve);
-            pstmtEleve.setString(1, null);
-            pstmtEleve.setString(1, eleve.getMatricule());
-            pstmtEleve.setString(1, eleve.getClasse());
-//            pstmtEleve.setInt(3, eleve.getId());
+//             Récupérer l'ID généré pour la personne
 
-            pstmtEleve.executeUpdate();
+            rs = Pstmt.getGeneratedKeys();
+            int personneId = 0;
+            if (rs.next()) {
+                personneId = rs.getInt(1);
+            }
+
+//             Étape 2 : Insérer les informations de l'eleve dans la table Eleve
+
+            String query1 = "INSERT INTO Eleve () VALUES (?, ?, ?, ?)";
+            PstmtE = SingletonDataBase.getInstance().prepareStatement(query1, PreparedStatement.RETURN_GENERATED_KEYS);
+            PstmtE.setString(1, null);
+            PstmtE.setString(2, eleve.getClasse());
+            PstmtE.setString(3, eleve.getMatricule());
+            PstmtE.setInt(4, personneId);
+            PstmtE.executeUpdate();
 
         } catch (SQLException e) {
             e.printStackTrace();
-//            throw new SQLException("Erreur lors de la modification de l'élève");
-        } finally {
-            // Fermeture des ressources
-            if (Pstmt != null) Pstmt.close();
-            if (pstmtEleve != null) pstmtEleve.close();
         }
-        return eleve;
+        finally {
+            // Fermeture des ressources
+            if (rs != null) rs.close();
+            if (Pstmt != null) Pstmt.close();
+            if (PstmtE != null) PstmtE.close();
+        }
+
     }
 
+    /**
+     * Modifie un élève.
+     *
+     * @param eleve Élève à modifier.
+     * @return Élève modifié.
+     */
     @Override
-    public void supprimer(int identifiant) {
+    public Eleve modifier(Eleve eleve) throws SQLException {
+        return null;
+    }
+
+    /**
+     * Supprime un élève par son identifiant.
+     *
+     * @param id Identifiant de l'élève à supprimer.
+     */
+    @Override
+    public void delete(int id) {
 
     }
 
+    /**
+     * Obtient un élève par son identifiant.
+     *
+     * @param identifiant Identifiant de l'élève.
+     * @return Élève trouvé.
+     */
     @Override
     public Eleve Obtenir(int identifiant) {
         return null;
     }
 
+    /**
+     * Obtient la liste de tous les élèves.
+     *
+     * @return Liste d'élèves.
+     */
     @Override
     public List<Eleve> obtenirProfesseur() {
         return List.of();

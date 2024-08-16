@@ -16,7 +16,7 @@ public interface IEleveDao {
      * @param eleve Élève à ajouter.
      * @return Élève ajouté.
      */
-    Eleve Ajouter(Eleve eleve);
+    void save(Eleve eleve) throws SQLException;
 
     /**
      * Modifie un élève.
@@ -29,9 +29,9 @@ public interface IEleveDao {
     /**
      * Supprime un élève par son identifiant.
      *
-     * @param identifiant Identifiant de l'élève à supprimer.
+     * @param id Identifiant de l'élève à supprimer.
      */
-    void supprimer(int identifiant);
+    void delete(int ic);
 
     /**
      * Obtient un élève par son identifiant.

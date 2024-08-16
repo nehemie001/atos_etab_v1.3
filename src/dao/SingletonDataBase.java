@@ -20,7 +20,6 @@ public class SingletonDataBase {
             connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
 
         } catch (SQLException e) {
-//
             System.out.println(e.getMessage());
         }
     }
